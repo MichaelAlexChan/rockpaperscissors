@@ -6,13 +6,14 @@ function getComputerChoice() {
 //Returns a string for the hand choice based on the given number argument
 function getHandChoice(number) {
     let hand
-    if (number === 1) {
+    let convertNumber = Number(number)
+    if (convertNumber === 1) {
         hand = "Rock"
     }
-    else if (number === 2) {
+    else if (convertNumber === 2) {
         hand = "Paper"
     }
-    else if (number === 3) {
+    else if (convertNumber === 3) {
         hand = "Scissors"
     }
     else {
@@ -42,7 +43,7 @@ function playerWin(playerChoice, computerChoice) {
         }
     }
 
-    else if (playerChocie === "Scissors") {
+    else if (playerChoice === "Scissors") {
         if (computerChoice === "Rock") {
             playerWin = false
         }
@@ -75,9 +76,11 @@ function game() {
     let playerWins = 0
     let computerWins = 0
 
-    const playerChoice = getHandChoice(1)
 
     for (let i = 1; i <= 5; i++) {
+        let playerChoice = prompt("Please enter a number for your choice:\n1 - Rock\n2 - Paper\n3 - Scissors?")
+        playerChoice = getHandChoice(playerChoice)
+
         let computerChoice = getHandChoice(getComputerChoice())
         console.log(`Round ${i}:`)
 
@@ -94,7 +97,10 @@ function game() {
         }
     }
 
-    if (playerWins > computerWins) {
+    if (playerWins === computerWins) {
+        console.log("Tie!")
+    }
+    else if (playerWins > computerWins) {
         console.log("Player wins")
     }
     else {
