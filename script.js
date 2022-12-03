@@ -76,26 +76,26 @@ function game() {
     let playerWins = 0
     let computerWins = 0
 
+    //Loop for 5 rounds
+    // for (let i = 1; i <= 5; i++) {
+    //     let playerChoice = prompt("Please enter a number for your choice:\n1 - Rock\n2 - Paper\n3 - Scissors?")
+    //     playerChoice = getHandChoice(playerChoice)
 
-    for (let i = 1; i <= 5; i++) {
-        let playerChoice = prompt("Please enter a number for your choice:\n1 - Rock\n2 - Paper\n3 - Scissors?")
-        playerChoice = getHandChoice(playerChoice)
+    //     let computerChoice = getHandChoice(getComputerChoice())
+    //     console.log(`Round ${i}:`)
 
-        let computerChoice = getHandChoice(getComputerChoice())
-        console.log(`Round ${i}:`)
+    //     let playResult = playRound(playerChoice, computerChoice)
 
-        let playResult = playRound(playerChoice, computerChoice)
-
-        if (playResult === 1) {
-            playerWins++
-        }
-        else if (playResult === 0) {
-            computerWins++
-        }
-        else {
-            continue
-        }
-    }
+    //     if (playResult === 1) {
+    //         playerWins++
+    //     }
+    //     else if (playResult === 0) {
+    //         computerWins++
+    //     }
+    //     else {
+    //         continue
+    //     }
+    // }
 
     if (playerWins === computerWins) {
         console.log("Tie!")
