@@ -18,8 +18,14 @@ body {
     gap: 30px;
 }
 
-button {
+.btn {
     font-size: 20px;
     padding: 10px 30px;
     
+}
+
+#resultdiv {
+    margin-top: 50px;
+    font-size: 20px;
+    font-weight: bold;
 }
